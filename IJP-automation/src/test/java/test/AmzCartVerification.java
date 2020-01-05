@@ -3,7 +3,6 @@ package test;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,14 +20,17 @@ import amz_Methods.ProductPageMethods;
 import amz_Methods.SearchPageMethods;
 import testResources.TestDataProvider;
 import utilities.SystemSetProperties;
+import utilities.Verify;
 import utilities.WinHandler;
 
 public class AmzCartVerification {
 	WebDriver driver;
-
-	@Parameters({ "browser", "url" })
+	int ewaitTime;
+	int iwaitTime;
+	@Parameters({ "browser", "url", "ewaitTime", "iwaitTime" })
 	@BeforeMethod
-	public void driverInit(String browser, String url) {
+	public void driverInit(String browser, String url, int ewaitTime, int iwaitTime) {
+	
 		if (browser.equalsIgnoreCase("chrome")) {
 			SystemSetProperties.chrome();
 			driver = new ChromeDriver();
@@ -36,16 +38,19 @@ public class AmzCartVerification {
 			SystemSetProperties.Firefox();
 			driver = new FirefoxDriver();
 		}
+		this.ewaitTime=ewaitTime;
+		this.iwaitTime=iwaitTime;		
 		driver.manage().window().maximize();
 		driver.get(url);
+		
 	}
 	
 	
 	@Test(dataProvider="cartVerification", dataProviderClass = TestDataProvider.class)
 	public void verifyCartItems(String item, String num, String sortType) throws InterruptedException {
-		HomePageMethods home = new HomePageMethods(driver);
+		HomePageMethods home = new HomePageMethods(ewaitTime, driver);
 		home.searchItems(item);
-		SearchPageMethods search = new SearchPageMethods(driver);
+		SearchPageMethods search = new SearchPageMethods(ewaitTime,driver);
 		search.sort(sortType);
 		List<WebElement> productLinks=search.getSearchResults();
 		int noProds=(int) (Float.parseFloat(num));
@@ -53,11 +58,10 @@ public class AmzCartVerification {
 		String[] productName= new String[noProds];
 		double[] productPrice= new double[noProds];
 		double prodSum=0;
-		ProductPageMethods product = new ProductPageMethods(driver);
+		ProductPageMethods product = new ProductPageMethods(ewaitTime,driver);
 		DecimalFormat df = new DecimalFormat("0.00");
 		for (int i=0;i<noProds;i++) {
-			Actions actions = new Actions(driver);
-			actions.moveToElement(productLinks.get(i)).click().build().perform();
+			Verify.click(productLinks.get(i), 5, driver);
 			WinHandler window = new WinHandler(driver,mainWindow);
 			window.childWindow();
 			if(!(product.dealProduct()||product.multiSeller())) {
@@ -72,11 +76,10 @@ public class AmzCartVerification {
 				productLinks.remove(i);
 				i--;
 			}
-			Thread.sleep(5000);
 			window.mainWindow();
 		}
 		home.navigateToCart();
-		CartPageMethods cart= new CartPageMethods(driver);
+		CartPageMethods cart= new CartPageMethods(ewaitTime, driver);
 		
 		String[] cartItems= cart.getCartItems();
 		double[] cartItemPrice=cart.getItemPrice();

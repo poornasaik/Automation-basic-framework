@@ -1,4 +1,7 @@
 package utilities;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 //System property setter
 public class SystemSetProperties {
 	//sets system property for chrome
@@ -9,7 +12,10 @@ public class SystemSetProperties {
 	
 	//sets system property for firefox
 	public static void Firefox() {
-		System.setProperty("webdriver.geckodriver", "./src/test/resources/drivers/geckodriver.exe");
+		
+		//DesiredCapabilities capability = DesiredCapabilities.firefox();
+		//capability.setCapability("marionette", false);
+		System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
 
 	}
 

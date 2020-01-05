@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<!-- Specify Browser for a suite -->
-	<parameter name="browser" value="chrome" />
+
 	<parameter name="url" value="https://www.amazon.in" />
-	<test thread-count="5" name="CartVerification">
+
+	<test thread-count="5" name="CartVerification-chrome">
+		<parameter name="browser" value="firefox" />
+		<parameter name="ewaitTime" value="10" />
+		<parameter name="iwaitTime" value="10" />
 		<!-- Specify Browser for a test -->
 		<!--<parameter name="browser" value="chrome"/> -->
 		<classes>

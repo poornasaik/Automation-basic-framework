@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="chrome"/>
   <parameter name="url" value="https://www.amazon.in"/>
-  <test thread-count="5" name="CartVerification(failed)">
+  <test thread-count="5" name="CartVerification-chrome(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="ewaitTime" value="10"/>
+    <parameter name="iwaitTime" value="10"/>
     <classes>
       <class name="test.AmzCartVerification">
         <methods>
-          <include name="verifyCartItems" invocation-numbers="1"/>
+          <include name="verifyCartItems" invocation-numbers="0"/>
           <include name="terminateDriver"/>
           <include name="driverInit"/>
         </methods>
       </class> <!-- test.AmzCartVerification -->
     </classes>
-  </test> <!-- CartVerification(failed) -->
+  </test> <!-- CartVerification-chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
