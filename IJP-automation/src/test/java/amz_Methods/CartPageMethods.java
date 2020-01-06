@@ -6,16 +6,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import amz_Locators.CartPageLocators;
+import utilities.Verify;
 
 public class CartPageMethods implements CartPageLocators {
 
 	WebDriver driver;
+	int time;
 
-	public CartPageMethods(WebDriver driver) {
+	public CartPageMethods(int time, WebDriver driver) {
 		this.driver = driver;
+		this.time=time;
 	}
 	public String[] getCartItems() {
-		List<WebElement> cartItemElement = driver.findElements(cartItems);
+		List<WebElement> cartItemElement = Verify.getElements(cartItems, time, driver);
 		int size = cartItemElement.size();
 		String[] name = new String[size];
 		for (int i = 0; i < size; i++) {
@@ -25,7 +28,7 @@ public class CartPageMethods implements CartPageLocators {
 	}
 
 	public double[] getItemPrice() {
-		List<WebElement> cartItemElement = driver.findElements(itemPrice);
+		List<WebElement> cartItemElement = Verify.getElements(itemPrice, time, driver);
 		int size = cartItemElement.size();
 		double[] price = new double[size];
 		for (int i = 0; i < size; i++) {
@@ -34,7 +37,7 @@ public class CartPageMethods implements CartPageLocators {
 		return price;
 	}
 	public double getSubTotal() {
-		WebElement subTotEle = driver.findElement(subTotal);
+		WebElement subTotEle = Verify.getElement(subTotal, time, driver);
 		double subTot = Double.parseDouble(subTotEle.getText().replaceAll("\u20B9|,", "").trim());
 		return subTot;
 	}

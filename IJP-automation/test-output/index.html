@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Workspace\IJP-automation\testng.xml</span>
+                    <span>G:\MyGit\IJP\IJP-automation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,24 +102,10 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.AmzCartVerification" class="method navigator-link" hash-for-method="verifyCartItems(Mobiles, 4.0, Newest Arrivals)">verifyCartItems(Mobiles, 4.0, Newest Arrivals)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="test.AmzCartVerification" class="method navigator-link" hash-for-method="verifyCartItems(pens, 2.0, Price: Low to High)">verifyCartItems(pens, 2.0, Price: Low to High)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="test.AmzCartVerification" class="method navigator-link" hash-for-method="verifyCartItems(Purse, 5.0, Price: Low to High)">verifyCartItems(Purse, 5.0, Price: Low to High)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -139,9 +125,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCartItems(Mobiles, 4.0, Newest Arrivals)">
-                  </a> <!-- verifyCartItems(Mobiles, 4.0, Newest Arrivals) -->
+                  <a name="verifyCartItems(pens, 2.0, Price: Low to High)">
+                  </a> <!-- verifyCartItems(pens, 2.0, Price: Low to High) -->
                   <span class="method-name">verifyCartItems</span>
+<<<<<<< HEAD
                   <span class="parameters">(Mobiles, 4.0, Newest Arrivals)</span>
                   <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=79.0.3945.88)
@@ -160,44 +147,43 @@ Session ID: c04d592b60c4a540aebc97879a690bb2
 	at utilities.WinHandler.mainWindow(WinHandler.java:45)
 	at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:76)
 ... Removed 29 stack frames
+=======
+                  <span class="parameters">(pens, 2.0, Price: Low to High)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Element not found using locator By.xpath: //div[@class=&apos;a-popover-inner&apos;]//li due to :org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class=&apos;a-popover-inner&apos;]//li (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-ATM4KV28&apos;, ip: &apos;192.168.0.124&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 1068, moz:profile: C:\Users\poorn\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7dd83ff1-b40d-40e3-9336-3f8b682eb4e6
+	at utilities.Verify.getElements(Verify.java:44)
+	at amz_Methods.SearchPageMethods.sort(SearchPageMethods.java:29)
+	at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:54)
+... Removed 26 stack frames
+>>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.AmzCartVerification</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyCartItems(Purse, 5.0, Price: Low to High)">
-                  </a> <!-- verifyCartItems(Purse, 5.0, Price: Low to High) -->
-                  <span class="method-name">verifyCartItems</span>
-                  <span class="parameters">(Purse, 5.0, Price: Low to High)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Workspace\IJP-automation\testng.xml</span>
+            <span class="header-content">G:\MyGit\IJP\IJP-automation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.amazon.in&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;CartVerification&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;CartVerification-chrome&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;ewaitTime&quot; value=&quot;10&quot;/&gt;
+    &lt;parameter name=&quot;iwaitTime&quot; value=&quot;10&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.AmzCartVerification&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- CartVerification --&gt;
+  &lt;/test&gt; &lt;!-- CartVerification-chrome --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -209,7 +195,7 @@ Session ID: c04d592b60c4a540aebc97879a690bb2
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CartVerification (1 class)</span>
+                <span class="test-name">CartVerification-chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,20 +221,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyCartItems')
 data.setCell(0, 2, 'test.AmzCartVerification')
+<<<<<<< HEAD
 data.setCell(0, 3, 112745);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyCartItems')
 data.setCell(1, 2, 'test.AmzCartVerification')
 data.setCell(1, 3, 94647);
+=======
+data.setCell(0, 3, 14493);
+>>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -276,10 +266,11 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">test.AmzCartVerification</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">driverInit(chrome, https://www.amazon.in)</span>
+                <span class="method-name">driverInit(firefox, https://www.amazon.in, 10, 10)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+<<<<<<< HEAD
                 <span class="method-name">verifyCartItems(Purse, 5.0, Price: Low to High)</span>
                 <span class="method-start">9590 ms</span>
               </div> <!-- test-method -->
@@ -300,6 +291,16 @@ return data;
               <div class="configuration-method after">
                 <span class="method-name">terminateDriver</span>
                 <span class="method-start">226237 ms</span>
+=======
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyCartItems(pens, 2.0, Price: Low to High)</span>
+                <span class="method-start">19438 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">terminateDriver</span>
+                <span class="method-start">33942 ms</span>
+>>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
