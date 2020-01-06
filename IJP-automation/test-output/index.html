@@ -143,9 +143,23 @@
                   </a> <!-- verifyCartItems(Mobiles, 4.0, Newest Arrivals) -->
                   <span class="method-name">verifyCartItems</span>
                   <span class="parameters">(Mobiles, 4.0, Newest Arrivals)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [31559.699999999997] but found [31559.7]
-	at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:87)
-... Removed 30 stack frames
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SYS348&apos;, ip: &apos;192.168.1.25&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\POORNA~1.KAM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c04d592b60c4a540aebc97879a690bb2
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at utilities.WinHandler.mainWindow(WinHandler.java:45)
+	at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:76)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -225,11 +239,11 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyCartItems')
 data.setCell(0, 2, 'test.AmzCartVerification')
-data.setCell(0, 3, 117625);
+data.setCell(0, 3, 112745);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyCartItems')
 data.setCell(1, 2, 'test.AmzCartVerification')
-data.setCell(1, 3, 111491);
+data.setCell(1, 3, 94647);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -267,25 +281,25 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyCartItems(Purse, 5.0, Price: Low to High)</span>
-                <span class="method-start">8762 ms</span>
+                <span class="method-start">9590 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">terminateDriver</span>
-                <span class="method-start">126390 ms</span>
+                <span class="method-start">122337 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">driverInit(chrome, https://www.amazon.in)</span>
-                <span class="method-start">127205 ms</span>
+                <span class="method-start">123213 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyCartItems(Mobiles, 4.0, Newest Arrivals)</span>
-                <span class="method-start">137393 ms</span>
+                <span class="method-start">131588 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">terminateDriver</span>
-                <span class="method-start">248887 ms</span>
+                <span class="method-start">226237 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

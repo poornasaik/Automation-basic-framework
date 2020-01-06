@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-01-03T15:31:20Z" name="Suite" finished-at="2020-01-03T15:35:30Z" duration-ms="250323">
+  <suite started-at="2020-01-03T15:41:09Z" name="Suite" finished-at="2020-01-03T15:44:56Z" duration-ms="227281">
     <groups>
     </groups>
-    <test started-at="2020-01-03T15:31:20Z" name="CartVerification" finished-at="2020-01-03T15:35:30Z" duration-ms="250323">
+    <test started-at="2020-01-03T15:41:09Z" name="CartVerification" finished-at="2020-01-03T15:44:56Z" duration-ms="227281">
       <class name="test.AmzCartVerification">
-        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:31:21Z" name="driverInit" finished-at="2020-01-03T15:31:29Z" duration-ms="8761" status="PASS">
+        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:41:09Z" name="driverInit" finished-at="2020-01-03T15:41:19Z" duration-ms="9590" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInit -->
-        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:31:29Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:33:27Z" duration-ms="117625" status="PASS">
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:41:19Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:43:12Z" duration-ms="112745" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,11 +44,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCartItems -->
-        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:33:27Z" name="terminateDriver" finished-at="2020-01-03T15:33:28Z" duration-ms="815" status="PASS">
+        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:43:12Z" name="terminateDriver" finished-at="2020-01-03T15:43:12Z" duration-ms="876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateDriver -->
-        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:33:28Z" name="driverInit" finished-at="2020-01-03T15:33:38Z" duration-ms="10188" status="PASS">
+        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:43:12Z" name="driverInit" finished-at="2020-01-03T15:43:21Z" duration-ms="8375" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,7 +64,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInit -->
-        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:33:38Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:35:29Z" duration-ms="111491" status="FAIL">
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:43:21Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:44:55Z" duration-ms="94647" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -82,18 +82,37 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [31559.699999999997] but found [31559.7]]]>
+              <![CDATA[chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SYS348', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\POORNA~1.KAM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c04d592b60c4a540aebc97879a690bb2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [31559.699999999997] but found [31559.7]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:87)
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SYS348', ip: '192.168.1.25', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\POORNA~1.KAM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:50132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c04d592b60c4a540aebc97879a690bb2
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+at utilities.WinHandler.mainWindow(WinHandler.java:45)
+at test.AmzCartVerification.verifyCartItems(AmzCartVerification.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,11 +140,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCartItems -->
-        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:35:29Z" name="terminateDriver" finished-at="2020-01-03T15:35:30Z" duration-ms="1038" status="PASS">
+        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:44:55Z" name="terminateDriver" finished-at="2020-01-03T15:44:56Z" duration-ms="632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateDriver -->
