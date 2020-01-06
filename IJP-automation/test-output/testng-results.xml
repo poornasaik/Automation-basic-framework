@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
 <<<<<<< HEAD
   <suite started-at="2020-01-03T15:41:09Z" name="Suite" finished-at="2020-01-03T15:44:56Z" duration-ms="227281">
     <groups>
@@ -11,12 +12,19 @@
         <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:41:09Z" name="driverInit" finished-at="2020-01-03T15:41:19Z" duration-ms="9590" status="PASS">
 =======
   <suite started-at="2020-01-06T01:55:32Z" name="Suite" finished-at="2020-01-06T01:56:14Z" duration-ms="42012">
+=======
+  <suite started-at="2020-01-06T09:09:22Z" name="Suite" finished-at="2020-01-06T09:11:06Z" duration-ms="104312">
+>>>>>>> secondary
     <groups>
     </groups>
-    <test started-at="2020-01-06T01:55:32Z" name="CartVerification-chrome" finished-at="2020-01-06T01:56:14Z" duration-ms="42012">
+    <test started-at="2020-01-06T09:09:22Z" name="CartVerification" finished-at="2020-01-06T09:11:06Z" duration-ms="104312">
       <class name="test.AmzCartVerification">
+<<<<<<< HEAD
         <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String, int, int)[pri:0, instance:test.AmzCartVerification@37271612]" started-at="2020-01-06T01:55:33Z" name="driverInit" finished-at="2020-01-06T01:55:53Z" duration-ms="19438" status="PASS">
 >>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
+=======
+        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String, int)[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:09:23Z" name="driverInit" finished-at="2020-01-06T09:09:30Z" duration-ms="7678" status="PASS">
+>>>>>>> secondary
           <params>
             <param index="0">
               <value>
@@ -49,9 +57,10 @@
 >>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
             <param index="2">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[5]]>
               </value>
             </param>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </params>
           <reporter-output>
@@ -67,26 +76,20 @@
 =======
             <param index="3">
 >>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
+=======
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInit -->
-<<<<<<< HEAD
-        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:43:21Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:44:55Z" duration-ms="94647" status="FAIL">
-=======
-        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@37271612]" started-at="2020-01-06T01:55:53Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-06T01:56:07Z" duration-ms="14493" status="FAIL">
->>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:09:30Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-06T09:10:04Z" duration-ms="33325" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[pens]]>
+                <![CDATA[Shirts]]>
               </value>
             </param>
             <param index="1">
+>>>>>>> secondary
               <value>
                 <![CDATA[2.0]]>
               </value>
@@ -97,6 +100,61 @@
               </value>
             </param>
           </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartItems -->
+        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:10:04Z" name="terminateDriver" finished-at="2020-01-06T09:10:11Z" duration-ms="7489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateDriver -->
+        <test-method is-config="true" signature="driverInit(java.lang.String, java.lang.String, int)[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:10:11Z" name="driverInit" finished-at="2020-01-06T09:10:19Z" duration-ms="8170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.amazon.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInit -->
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@22fcf7ab]" started-at="2020-01-03T15:43:21Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-03T15:44:55Z" duration-ms="94647" status="FAIL">
+=======
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@37271612]" started-at="2020-01-06T01:55:53Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-06T01:56:07Z" duration-ms="14493" status="FAIL">
+>>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
+=======
+        <test-method signature="verifyCartItems(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:10:19Z" name="verifyCartItems" data-provider="cartVerification" finished-at="2020-01-06T09:11:03Z" duration-ms="43745" status="PASS">
+>>>>>>> secondary
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mobiles]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3.0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Price: Low to High]]>
+              </value>
+            </param>
+          </params>
+<<<<<<< HEAD
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
 <<<<<<< HEAD
@@ -185,10 +243,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 =======
         <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@37271612]" started-at="2020-01-06T01:56:07Z" name="terminateDriver" finished-at="2020-01-06T01:56:14Z" duration-ms="6693" status="PASS">
 >>>>>>> 9ad4f62d07347c93efee2d421a8537a76ee5b690
+=======
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartItems -->
+        <test-method is-config="true" signature="terminateDriver()[pri:0, instance:test.AmzCartVerification@305b7c14]" started-at="2020-01-06T09:11:03Z" name="terminateDriver" finished-at="2020-01-06T09:11:06Z" duration-ms="3489" status="PASS">
+>>>>>>> secondary
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateDriver -->
       </class> <!-- test.AmzCartVerification -->
-    </test> <!-- CartVerification-chrome -->
+    </test> <!-- CartVerification -->
   </suite> <!-- Suite -->
 </testng-results>
