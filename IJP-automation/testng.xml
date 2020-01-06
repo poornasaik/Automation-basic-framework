@@ -5,11 +5,19 @@
 	<parameter name="url" value="https://www.amazon.in" />
 
 	<test thread-count="5" name="CartVerification-chrome">
-		<parameter name="browser" value="firefox" />
-		<parameter name="ewaitTime" value="10" />
-		<parameter name="iwaitTime" value="10" />
 		<!-- Specify Browser for a test -->
-		<!--<parameter name="browser" value="chrome"/> -->
+		<parameter name="browser" value="chrome" />
+		<!-- Specify explicit wait time for a test -->
+		<parameter name="ewaitTime" value="5" /> 
+		<classes>
+			<class name="test.AmzCartVerification" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="CartVerification-firefox">
+		<!-- Specify Browser for a test -->
+		<parameter name="browser" value="firefox" />
+		<!-- Specify explicit wait time for a test -->
+		<parameter name="ewaitTime" value="5" /> 
 		<classes>
 			<class name="test.AmzCartVerification" />
 		</classes>

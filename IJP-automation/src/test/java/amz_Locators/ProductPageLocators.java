@@ -1,6 +1,9 @@
 package amz_Locators;
 
 import org.openqa.selenium.By;
+/* Contains Locators of Amazon Product page.
+ * Add/modify any locators of Amazon Product page here.
+ * */
 
 public interface ProductPageLocators {
  By productName = By.xpath("//span[@id='productTitle']");

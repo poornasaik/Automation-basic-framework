@@ -1,7 +1,5 @@
 package utilities;
 
-import org.openqa.selenium.remote.DesiredCapabilities;
-
 //System property setter
 public class SystemSetProperties {
 	//sets system property for chrome

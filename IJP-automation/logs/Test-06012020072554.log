@@ -1,5 +1,0 @@
-07:25:54.730 [main] INFO  utilities.Verify - Found element with locator:By.xpath: //input[@id='twotabsearchtextbox'] and returned
-07:25:55.244 [main] INFO  amz_Methods.SearchPageMethods - trying to sort
-07:25:56.966 [main] INFO  utilities.Verify - Found element with locator:By.xpath: //select[@name='s'] and returned
-07:25:57.266 [main] INFO  utilities.Verify - Element not interactable, trying actions
-07:26:07.643 [main] ERROR utilities.Verify - unable to locate elements using locator: By.xpath: //div[@class='a-popover-inner']//li

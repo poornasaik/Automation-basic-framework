@@ -1,22 +1,14 @@
-package test;
+package Initial;
 
 import java.text.ParseException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,19 +17,19 @@ import utilities.WinHandler;
 
 public class SampleTest {
 
-	public static void main(String[] args) throws InterruptedException, ParseException {
+	public static void main(String[] args) throws ParseException {
 
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.gecko.driver", "./src/test/resources/drivers/geckodriver.exe");
 
 		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in");
-		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("mobiles");
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("pens");
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).submit();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='a-dropdown-label']")));
+		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='a-dropdown-label']")));
 		WinHandler.waitForPageLoad(driver, 5);
 		driver.findElement(By.xpath("//span[@class='a-dropdown-label']")).click();
 		System.out.println("clicked");

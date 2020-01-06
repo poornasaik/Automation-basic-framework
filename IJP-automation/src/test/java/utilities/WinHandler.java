@@ -10,15 +10,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class WinHandler {
 	String mainWindow;
 	WebDriver driver;
+	int time;
 	private static Logger log = LogManager.getLogger(WinHandler.class.getName());
 
-	public WinHandler(WebDriver driver, String mainWindow) {
+	public WinHandler(WebDriver driver, String mainWindow, int time) {
 		this.driver = driver;
 		this.mainWindow = mainWindow;
+		this.time= time;
 	}
 	
 
@@ -26,19 +29,12 @@ public class WinHandler {
 
 		Set<String> setWindows = driver.getWindowHandles();
 		Iterator<String> iterateWindows = setWindows.iterator();
-
-		// Using iterator of sets iterate through all the opened Windows and if they
-		// don't match main window navigate to it
 		while (iterateWindows.hasNext()) {
 			String childWindow = iterateWindows.next();
-
-			// if the window is not main window then switch to that window
 			if (!mainWindow.equalsIgnoreCase(childWindow)) {
 				log.info("Changing to Child window");
-				// Switching to Product window
 				driver.switchTo().window(childWindow);
-
-				// stop switching the window once moved to next window
+				waitForPageLoad(driver, time);
 				break;
 			}
 		}
@@ -49,8 +45,10 @@ public class WinHandler {
 	 * work as the focused window is closed and not available to retrieve its data
 	 */
 	public void mainWindow() {
-		driver.switchTo().window(mainWindow);
 		log.info("Changed to main window");
+		driver.switchTo().window(mainWindow);
+		
+		
 	}
 
 	public boolean NewWindows(int windowCount, WebDriver driver, int time) {
@@ -59,8 +57,10 @@ public class WinHandler {
 		try{
 			wait.until(ExpectedConditions.numberOfWindowsToBe(windowCount));
 			return true;
+
 		}
 		catch(Exception e) {
+			log.error("Window count doesn't Match");
 			return false;
 			}
 		
@@ -71,8 +71,6 @@ public class WinHandler {
 		try{
 			wait.until(new Function<WebDriver, Boolean>() {
 		        public Boolean apply(WebDriver driver) {
-		            System.out.println("Current Window State       : "
-		                + String.valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState")));
 		            return String
 		                .valueOf(((JavascriptExecutor) driver).executeScript("return document.readyState"))
 		                .equals("complete");
@@ -81,7 +79,7 @@ public class WinHandler {
 			
 		}
 		catch(Exception e) {
-			
+			log.error("Page load has exceeded the maximum time i.e. "+time+" seconds");
 			}
 	}
 	public void closeChildWindow() {
@@ -95,7 +93,7 @@ public class WinHandler {
 
 	public void closeMainWindow() {
 		String window = driver.getWindowHandle();
-		if (!mainWindow.equalsIgnoreCase(window))
+		if (mainWindow.equalsIgnoreCase(window))
 		log.info("Closing Main window");
 		driver.close();
 	}
