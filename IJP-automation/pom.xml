@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
   <profiles>
 	<profile>
-            <id>USLegacyLIHPChromeL2</id>
+            <id>sam</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
