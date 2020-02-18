@@ -5,7 +5,17 @@
 	<groupId>com.amazon</groupId>
 	<artifactId>IJP-automation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
+  <profiles>
+	<profile>
+            <id>USLegacyLIHPChromeL2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.name>testng.xml</suite.name>
+            </properties>
+        </profile>
+	</profiles>
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
